@@ -12,9 +12,11 @@
 
   Clear logs are like a debugger for the big-picture of your project
   the debugger lets you step through each individual step of your application
+    - Implementation
     this very specific view helps to fix specific bugs
     but can make it hard to understand the big picture of your application
   logging changes to important data in your will help you to see the big picture
+    - Behavior
     seeing how the application progresses over longer period of times
     with the clutter of extra variables removed for clarity
 
@@ -23,7 +25,7 @@
 // --- initialize the application ---
 
 // this variable stores useful data for the user
-//  it is the application state
+//  it is the state
 const state = {
   favorite: -1,
   words: []
@@ -39,16 +41,15 @@ const stateLog = [
 // --- add random strings to state ---
 
 // this variable is used by the program to manage control flow
-//  it is part of program state
-//  it is not part of application state
+//  it is not part of state
 const range = Math.ceil(Math.random() * 10);
 
 for (let i = 0; i < range; i++) {
   // this variable stores the random string
-  //  the data it stores may become part of application state
+  //  the data it stores may become part of state
   const randomWord = Math.random().toString(36).substring(7);
   alert(`entering random string: "${randomWord}"`);
-  // add nextInput to program state
+  // add nextInput to state
   state.words.push(randomWord);
   // log the state change
   stateLog.push(deepClone(state));
@@ -58,8 +59,9 @@ for (let i = 0; i < range; i++) {
 
 // --- randomly select a saved word ---
 
-// the following variables will not become part of application state
-// they are part of program state, but not application state
+// the following data will not become part of state
+//  they read from state and RENDER state
+//  rendering is when you take data and make it readable for a user
 
 // renderedWords stores part of state rendered to a string
 const renderedWords = state.words.reduce((msg, next, index) => {

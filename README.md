@@ -25,6 +25,9 @@
 
 ### Isolating JavaScript
 
+* Defining _State_
+  * Determining what data is important for a user
+  * Separating important data from local variables
 * Logging
   * Capture and store a log of all user interactions & state changes
   * Use this log to reconstruct user actions and debug your projects
@@ -56,7 +59,7 @@ To help you understand and debug your projects you will learn about __logging__ 
 
 In this module you'll be flipping everything upside down! In previous modules you learned to develop your projects from the user interface backwards, beginning by planning what a user will see on the screen and how they will in interact with this.  Starting now you will learn to do things from the inside out:
 
-1. __What can a user do on your web site?__ Write user stories to describe the user's possible interactions with your site
+1. __What can a user do on your website?__ Write user stories to describe the user's possible interactions with your site
 2. __What data is necessary for these user stories?__  Write a schema to describe & validate your project's data. Try determining what will be the best order to develope these stories.
 3. __How does the UI represent *state* and *user interactions*?__ Write a wireframe to describe how the UI will represent the program state for users, and how users can interact with the state.
 4. __What code do you need to write?__ Fill out your development strategy with the code you will need to write, and who is responsible for what.
@@ -108,21 +111,29 @@ The focus of week 1 is storing important data in an object called _state_, and l
 
 ### Prep Work
 
+> before class
+
 - [Isolate](./isolate/index.html)
   - Copying Arrays and Objects
   - Application State (examples)
 - [Integrate](./integrate/README.md)
   - Application State (examples)
 
-### Isolate
+### Lesson Plan
+
+> during class
+
+#### Isolate
 
 - [Application State](./isolate/index.html) (examples & exercises)
 
-### Integrate
+#### Integrate
 
 - [Application State](./integrate/README.md) (examples & exercises)
 
 ### Project
+
+> after class
 
 > To be announced Monday after class
 
@@ -136,16 +147,23 @@ The focus of week 2 is learning how to render data into DOM elements to create i
 
 ### Prep Work
 
+> before class
 
-### [Isolate](../isolate/index.html)
+### Lesson Plan
+
+> during class
+
+#### [Isolate](../isolate/index.html)
 
 
 
-### [Integrate](../integrate/README.md)
+#### [Integrate](../integrate/README.md)
 
 
 
 ### Project
+
+> after class
 
 
 [TOP](#state)
