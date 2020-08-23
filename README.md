@@ -15,7 +15,7 @@
 - Sundays & Projects
   - [Week 1](#week-1)
   - [Week 2](#week-2)
-- [Class Recordings](./class-recordings.md)
+- [Class Recordings](#class-recordings)
 - [Curriculum](https://home.hackyourfuture.be/curriculum) (external)
 - [HYF Home](https://home.hackyourfuture.be/) (external)
 
@@ -23,23 +23,43 @@
 
 ## Learning Objectives
 
-### Isolating JavaScript
+### Vocabulary
 
-- Defining _State_
-  - Determining what data is important for a user
-  - Separating important data from local variables
-- Logging
-  - Capture and store a log of all user interactions & state changes
-  - Use this log to reconstruct user actions and debug your projects
+State/Log/Render are not bound to JavaScript. They are more general concepts. Any programming language can use state to store information, use built-in functions to log and use library functions to render.
 
-### Integrating JavaScript
+- __State__
+  - Information that is useful for the User of the program
+  - One can use any data structure or data type to store this information (objects/arrays/numbers/...)
+- __Log__
+  - It is like a diary/journal. A person logs an activity, a program logs an action/location/variables etc.
+  - Note that developers can also decide to log the _state_ of the program.
+  - Also note the name of console.log() function is purposeful! It prints(logs) on the console.
+  - It is also possible to print(log) to a file instead of console, which is a more common practice.
+  - Want to see file logging in real life?
+    1. open this repo in your terminal
+    2. enter `npm run start`
+    3. open `localhost:3000` in your browser
+    4. open the generated `/server-logs` folder in VSC to see a log of all server [requests and responses](https://www.youtube.com/watch?v=DrI2lUXL1no)!
+- __Render__
+  - The term comes from the Computer Graphics.
+  - Rendering simply means drawing something on the computer screen.
+  - Rendering can also mean making something visual or preparing a view for your data.
+
+### Programming Skills
 
 - Data-first development
   - Understanding applications as Data + User Interactions
   - Developing from the "inside" out: planning the data & logic of your app without a user interface
-- Rendering DOM Components
+- Defining _State_
+  - Determining what data is important for a user
+  - Choosing the correct JS data structure for you state
+  - Separating important data from local variables
+- Logging
+  - Capture and store a log of all user interactions & state changes
+  - Use this log to reconstruct user actions and debug your projects
+- Dynamically update the DOM to represent the current state
   - Render data into DOM elements
-  - Dynamically update the DOM to represent the current state
+  - Re-render portions of the DOM for a reactive experience
 
 [TOP](#state)
 
@@ -83,7 +103,6 @@ A working project is not enough! For projects in this module we will expect you 
 
 Your project will contain one more directory called `/lib`, but there is nothing for you to write in here. This folder will contain dependencies for your project. Feeling motivated? take a look through these files to try and understand them!
 
-
 [TOP](#state)
 
 ---
@@ -92,7 +111,16 @@ Your project will contain one more directory called `/lib`, but there is nothing
 
 - [What is state and why should we care about it?](https://dev.to/codeartistryio/what-is-state-and-why-should-we-care-about-it-4o95)
 - [/integrate/stepped-and-separated](./integrate/stepped-and-separated) (code to study)
-- > more links coming soon
+- DOM Elements: Attributes vs. Properties
+  - [javascript.info](https://javascript.info/dom-attributes-and-properties)
+  - [FullstackTraning](https://blog.fullstacktraining.com/html-attributes-vs-dom-properties/) (article)
+  - [WebTunings](https://www.youtube.com/watch?v=9DWKjn969lM) (video)
+  - StackOverflow: [the difference](https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html), [when to use which](https://stackoverflow.com/questions/3919291/when-to-use-setattribute-vs-attribute-in-javascript)
+- [Learn DOM Rendering](https://github.com/oliverjam/learn-dom-rendering)
+- [Learn Form Validation](https://github.com/oliverjam/learn-form-validation)
+- Nodes vs. Elements
+  - [Web Tunings](https://www.youtube.com/watch?v=FrX1bzWc8O4)
+  - [StackOverflow](https://stackoverflow.com/questions/9979172/difference-between-node-object-and-element-object)
 
 [TOP](#state)
 
@@ -102,7 +130,18 @@ Your project will contain one more directory called `/lib`, but there is nothing
 
 Exercises for solo-study.  We won't be checking these exercises unless you ask us to look them over, your learning is in your hands.  Take a look through these and find the ones that help the most, the rest will be here for you later!
 
-> To be announced Monday after class
+- [rendering-data](https://github.com/hackyourfuturebelgium/rendering-data)
+  - practice rendering JS data to DOM Elements
+  - this will help you understand the `/views` folder of your projects
+
+### Side-Projects
+
+Using the [state-project-starter](https://github.com/HackYourFutureBelgium/state-project-starter), practice building projects! You can dream up your own ideas, or try reverse-engineering one of these projects:
+
+- [Rock Paper Scissors (traversy)](https://www.youtube.com/watch?v=WR_pWXJZiRY)
+- [vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects)
+- [javascript-30](https://github.com/HackYourFutureBelgium/javascript-30)
+
 
 [TOP](#state)
 
@@ -149,10 +188,10 @@ The rest is up to you!
 #### Checklist
 
 ```md
-- [ ] [repo](https://github.com/_/_) with a complete README
+- [ ] [repo](https://github.com/_/_) (with a complete README)
 - [ ] [live demo](https://_.github.io/_)
+- [ ] [backlog](https://github.com/_/_/tree/master/backlog.md)
 - [ ] [development-strategy](https://github.com/_/_/tree/master/development-strategy.md)
-- [ ] [At least 6 initial quiz questions](https://github.com/_/_/tree/master/src/data.js)
 - [ ] [A project board](https://github.com/_/_/projects/X)
 - [ ] [One branch per step in `development-strategy.md`](https://github.com/_/_/network)
 - [ ] [One closed issue per task](https://github.com/_/_/issues?q=is%3Aissue+is%3Aclosed) (you can have more than task per development step!)
@@ -171,21 +210,55 @@ The focus of week 2 is learning how to render data into DOM elements to create i
 
 > before class
 
+- Rendering Data Examples: Isolate & Integrate
+- Nodes vs. Elements
+  - [Web Tunings](https://www.youtube.com/watch?v=FrX1bzWc8O4)
+  - [StackOverflow](https://stackoverflow.com/questions/9979172/difference-between-node-object-and-element-object)
+
 ### Lesson Plan
 
 > during class
 
 #### [Isolate](../isolate/index.html)
 
-
+[2. Rendering Data](./isolate/index.html)
 
 #### [Integrate](../integrate/README.md)
 
-
+[2. Rendering Data](./integrate/README.md)
 
 ### Project
 
 > after class
+
+Finish up the JS Quiz from last week.
+
+[TOP](#state)
+
+---
+
+## Class Recordings
+
+Screen recordings of class.  Coaches, when sending your PR's with links please ...
+
+- Add a link to your video in the correct module's section
+- Indicate which class you were teaching
+- Which week it was
+- Give your name
+- and a helpful description
+
+---
+
+### Classes 9 & 10
+
+[Unmesh](https://github.com/unmeshvrije
+), [Sali](https://github.com/Sali-Almurshidi), [Ismaila](https://github.com/auloin), [Louis](https://github.com/Mamboleoo)
+
+#### Week 1
+
+1. [State & Logging](https://vimeo.com/448445380)
+1. [Object vs. State](https://vimeo.com/448849518)
+1. [Integrating State](https://vimeo.com/448849847)
 
 
 [TOP](#state)
