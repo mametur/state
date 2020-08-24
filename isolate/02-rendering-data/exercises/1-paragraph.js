@@ -8,7 +8,20 @@ const expect = chai.expect;
  * @param {string[]} [classList=[]] - an array of classes to apply
  * @returns {HTMLParagraphElement} a rendered paragraph element
  */
+
 const renderParagraph = (text, classList = []) => {
+
+  const pEl = document.createElement('p');
+  pEl.innerHTML = text;
+
+
+  classList.forEach(classes => {
+
+    pEl.classList.add(classes);
+
+  });
+
+  return pEl;
 
 };
 

@@ -9,15 +9,15 @@ const expect = chai.expect;
  */
 const renderAllUsers = (arrOfUsers, id, classList = []) => {
   const ulEl = document.createElement('ul');
-  ulEl._ = _;
-  for (const _ of _) {
-    ulEl.classList.add(_);
+  ulEl.id = id;
+  for (const classes of classList) {
+    ulEl.classList.add(classes);
   }
 
-  for (const _ of _) {
+  for (const user of arrOfUsers) {
     const liEl = document.createElement('li');
-    liEl.innerHTML = `${_._}: ${_._}`;
-    _.appendChild(_);
+    liEl.innerHTML = `${user.realName}: ${user.screenName}`;
+    ulEl.appendChild(liEl);
   };
 
   return ulEl;
